@@ -69,9 +69,9 @@ function Ox.GetGroupsByType(groupType) end
 function Ox.GetGroup(name) end
 
 ---**`server`**
----@param entityId number
+---@param playerId number
 ---@return OxPlayerServer
-function Ox.GetPlayer(entityId) end
+function Ox.GetPlayer(playerId) end
 
 ---**`server`**
 ---@param filter? table<string, any>
