@@ -12,7 +12,7 @@ exports.ox_target = {}
 ---@field groups? string | string[] | table<string, number>
 ---@field items? string | string[] | table<string, number>
 ---@field anyItem? boolean
----@field canInteract? fun(entity?: number, distance: number, coords: vector3, name?: string, bone?: number): boolean?
+---@field canInteract? fun(entity?: number, distance: number, coords: vector3, name?: string, boneIndex?: number, boneName?: string): boolean?
 ---@field onSelect? fun(data: self | number)
 ---@field export? string
 ---@field event? string
