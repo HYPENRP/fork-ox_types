@@ -12,7 +12,7 @@ exports.ox_target = {}
 ---@field groups? string | string[] | table<string, number>
 ---@field items? string | string[] | table<string, number>
 ---@field anyItem? boolean
----@field canInteract? fun(entity?: number, distance: number, coords: vector3, name?: string, bone?: number): boolean?
+---@field canInteract? fun(entity?: number, distance: number, coords: vector3, name?: string, boneIndex?: number, boneName?: string): boolean?
 ---@field onSelect? fun(data: self | number)
 ---@field export? string
 ---@field event? string
@@ -33,7 +33,7 @@ exports.ox_target = {}
 ---@field radius? number
 ---@field debug? boolean
 ---@field drawSprite? boolean
----@field options OxTargetOption[]
+---@field options table<number, OxTargetOption>
 
 ---@class OxTargetBoxZone
 ---@field coords vector3
@@ -41,14 +41,14 @@ exports.ox_target = {}
 ---@field rotation? number
 ---@field debug? boolean
 ---@field drawSprite? boolean
----@field options OxTargetOption[]
+---@field options table<number, OxTargetOption>
 
 ---@class OxTargetPolyZone
 ---@field points vector3[]
 ---@field thickness? number
 ---@field debug? boolean
 ---@field drawSprite? boolean
----@field options OxTargetOption[]
+---@field options table<number, OxTargetOption>
 
 ---@param data OxTargetSphereZone
 ---@return number
@@ -66,16 +66,16 @@ function exports.ox_target:addPolyZone(data) end
 ---@param suppressWarning? boolean
 function exports.ox_target:removeZone(zone, suppressWarning) end
 
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addGlobalPed(options) end
 
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addGlobalVehicle(options) end
 
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addGlobalObject(options) end
 
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addGlobalPlayer(options) end
 
 ---@param options string | string[]
@@ -91,7 +91,7 @@ function exports.ox_target:removeGlobalObject(options) end
 function exports.ox_target:removeGlobalPlayer(options) end
 
 ---@param models (number | string) | (number | string)[]
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addModel(models, options) end
 
 ---@param models (number | string) | (number | string)[]
@@ -99,7 +99,7 @@ function exports.ox_target:addModel(models, options) end
 function exports.ox_target:removeModel(models, options) end
 
 ---@param netIds number | number[]
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addEntity(netIds, options) end
 
 ---@param netIds number | number[]
@@ -107,7 +107,7 @@ function exports.ox_target:addEntity(netIds, options) end
 function exports.ox_target:removeEntity(netIds, options) end
 
 ---@param entityIds number | number[]
----@param options OxTargetEntity | OxTargetEntity[]
+---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addLocalEntity(entityIds, options) end
 
 ---@param entityIds number | number[]
