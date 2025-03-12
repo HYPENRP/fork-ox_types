@@ -94,6 +94,12 @@ function exports.ox_target:removeGlobalObject(options) end
 ---@param options string | string[]
 function exports.ox_target:removeGlobalPlayer(options) end
 
+---@param options OxTargetOption | OxTargetOption[]
+function exports.ox_target:addGlobalOption(options) end
+
+---@param options string | string[]
+function exports.ox_target:removeGlobalOption(options) end
+
 ---@param models (number | string) | (number | string)[]
 ---@param options OxTargetEntity | table<number, OxTargetEntity>
 function exports.ox_target:addModel(models, options) end
