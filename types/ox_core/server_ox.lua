@@ -94,6 +94,11 @@ function Ox.GetPlayers(filter) end
 function Ox.GetVehicle(entityId) end
 
 ---**`server`**
+---@param entityId number
+---@return OxVehicleServer
+function Ox.GetVehicleFromEntity(entityId) end
+
+---**`server`**
 ---@param netId number
 ---@return OxVehicleServer
 function Ox.GetVehicleFromNetId(netId) end
@@ -137,3 +142,15 @@ function Ox.GetLicense(name) end
 ---**`server`**
 ---@return OxLicense[]
 function Ox.GetLicenses() end
+
+---**`server`**
+---@param userId number
+---@param reason string?
+---@param hours string?
+---@return boolean
+function Ox.BanUser(userId, reason, hours) end
+
+---**`server`**
+---@param userId number
+---@return boolean
+function Ox.UnbanUser(userId) end
