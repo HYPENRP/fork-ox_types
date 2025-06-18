@@ -92,6 +92,7 @@ local VehicleClasses = {
 ---@field seats number;
 ---@field type VehicleTypes;
 ---@field weapons? true;
+---@field petrolTankVolume number;
 
 ---@alias OxAccountRole 'viewer' | 'contributor' | 'manager' | 'owner'
 
