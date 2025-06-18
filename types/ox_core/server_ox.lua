@@ -87,14 +87,19 @@ function Ox.GetPlayerFromFilter(filter) end
 function Ox.GetPlayerFromUserId(userId) end
 
 ---**`server`**
+---@param charId number
+---@return OxPlayerServer
+function Ox.GetPlayerFromCharId(charId) end
+
+---**`server`**
 ---@param filter? table<string, any>
 ---@return OxPlayerServer[]
 function Ox.GetPlayers(filter) end
 
 ---**`server`**
----@param entityId number
+---@param handle string|number `vin` or `entityId`
 ---@return OxVehicleServer
-function Ox.GetVehicle(entityId) end
+function Ox.GetVehicle(handle) end
 
 ---**`server`**
 ---@param entityId number
