@@ -84,15 +84,15 @@ local VehicleClasses = {
 ---| 'train';
 
 ---@class VehicleData : VehicleStats
----@field class VehicleClasses;
----@field doors number;
----@field make string;
----@field name string;
----@field price number;
----@field seats number;
----@field type VehicleTypes;
----@field weapons? true;
----@field petrolTankVolume number;
+---@field class VehicleClasses
+---@field doors number
+---@field make string
+---@field name string
+---@field price number
+---@field seats number
+---@field type VehicleTypes
+---@field weapons? true
+---@field petrolTankVolume number
 
 ---@alias OxAccountRole 'viewer' | 'contributor' | 'manager' | 'owner'
 

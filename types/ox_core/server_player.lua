@@ -3,7 +3,7 @@
 ---@class CreateVehicleData
 ---@field model string
 ---@field owner? number
----@field group? string
+---@field group? [string, number]
 ---@field stored? string
 ---@field properties? VehicleProperties
 

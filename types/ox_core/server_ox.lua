@@ -98,12 +98,12 @@ function Ox.GetPlayers(filter) end
 
 ---**`server`**
 ---@param handle string|number `vin` or `entityId`
----@return OxVehicleServer
+---@return OxVehicleServer?
 function Ox.GetVehicle(handle) end
 
 ---**`server`**
 ---@param entityId number
----@return OxVehicleServer
+---@return OxVehicleServer?
 function Ox.GetVehicleFromEntity(entityId) end
 
 ---**`server`**
@@ -113,12 +113,12 @@ function Ox.GetVehicleFromFilter(filter) end
 
 ---**`server`**
 ---@param netId number
----@return OxVehicleServer
+---@return OxVehicleServer?
 function Ox.GetVehicleFromNetId(netId) end
 
 ---**`server`**
 ---@param vin string
----@return OxVehicleServer
+---@return OxVehicleServer?
 function Ox.GetVehicleFromVin(vin) end
 
 ---**`server`**
