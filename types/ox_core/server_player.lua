@@ -60,7 +60,7 @@ function player.getCoords() end
 function player.getGroup(filter) end
 
 ---**`server`**
----@param type string
+---@param type string | string[]
 ---@return string? groupName
 ---@return number? grade
 function player.getGroupByType(type) end
