@@ -325,6 +325,12 @@ function exports.ox_inventory:Items(itemName) end
 ---@param data OxShopProperties
 function exports.ox_inventory:RegisterShop(archetype, data) end
 
+---**`server`**
 ---Unloads an inventory. Triggers a save for persistent inventories and deletes temporary ones.
 ---@param inv inventory
 function exports.ox_inventory:RemoveInventory(inv) end
+
+---**`server`**
+---@param itemName string
+---@param properties { slots: number, maxWeight: number, whitelist?: string[]|table<string|true>, blacklist?: string[]|table<string|true> }
+function exports.ox_inventory:setContainerProperties(itemName, properties) end
