@@ -181,9 +181,12 @@ function exports.ox_inventory:GetItemSlots(inv, item, metadata) end
 ---@param metadata? metadata
 ---@param slot? number
 ---@param ignoreTotal? boolean
+---@param strict? boolean strictly match metadata properties, otherwise use partial matching
+---@param deep? boolean remove inside containers
 ---@return boolean success
----@return string? response
-function exports.ox_inventory:RemoveItem(inv, item, count, metadata, slot, ignoreTotal) end
+---@return string response
+---@return number? removedCount
+function exports.ox_inventory:RemoveItem(inv, item, count, metadata, slot, ignoreTotal, strict, deep) end
 
 ---**`server`**
 ---@param inv inventory
@@ -293,8 +296,9 @@ function exports.ox_inventory:GetSlotIdsWithItem(inv, itemName, metadata, strict
 ---@param itemName string
 ---@param metadata? metadata
 ---@param strict? boolean strictly match metadata properties, otherwise use partial matching
+---@param deep? boolean search inside containers
 ---@return number count
-function exports.ox_inventory:GetItemCount(inv, itemName, metadata, strict) end
+function exports.ox_inventory:GetItemCount(inv, itemName, metadata, strict, deep) end
 
 ---**`server`**
 ---@param name string
