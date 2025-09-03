@@ -16,11 +16,6 @@ function Ox.GetGroup(name) end
 function Ox.GetGroupPermissions(groupName) end
 
 ---**`common`**
----@param category? string
----@return VehicleStats | table<string, VehicleStats>
-function Ox.GetTopVehicleStats(category) end
-
----**`common`**
 ---@param filter? string | string[]
 ---@return table<string, VehicleData> | VehicleData
 function Ox.GetVehicleData(filter) end
@@ -30,15 +25,7 @@ function Ox.GetVehicleData(filter) end
 ---@return string
 function Ox.GetVehicleNetworkType(modelName) end
 
----@alias VehicleCategories 'air' | 'land' | 'sea';
----@alias TopVehicleStats table<VehicleCategories, VehicleStats>
-
----@class VehicleStats
----@field acceleration number
----@field braking number
----@field handling number
----@field speed number
----@field traction number
+---@alias VehicleCategories 'air' | 'land' | 'sea'
 
 ---@enum VehicleClasses
 local VehicleClasses = {
@@ -81,9 +68,9 @@ local VehicleClasses = {
 ---| 'submarine'
 ---| 'submarinecar'
 ---| 'trailer'
----| 'train';
+---| 'train'
 
----@class VehicleData : VehicleStats
+---@class VehicleData
 ---@field class VehicleClasses
 ---@field doors number
 ---@field make string
