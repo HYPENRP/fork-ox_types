@@ -134,8 +134,9 @@ function exports.ox_inventory:GetSlotIdsWithItem(itemName, metadata, strict) end
 ---@param itemName string
 ---@param metadata? metadata
 ---@param strict? boolean strictly match metadata properties, otherwise use partial matching
+---@param deep? boolean search inside containers
 ---@return number count
-function exports.ox_inventory:GetItemCount(itemName, metadata, strict) end
+function exports.ox_inventory:GetItemCount(itemName, metadata, strict, deep) end
 
 ---**`client`**
 ---@param metadata table<string, string> | table<string, string>[]

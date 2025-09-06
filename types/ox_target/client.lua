@@ -14,6 +14,7 @@ exports.ox_target = {}
 ---@field iconColor? string
 ---@field distance? number
 ---@field groups? string | string[] | table<string, number>
+---@field excludedGroups? string | string[] | table<string, number>
 ---@field items? string | string[] | table<string, number>
 ---@field anyItem? boolean
 ---@field canInteract? fun(entity?: number, distance: number, coords: vector3, name?: string, bone?: OxTargetBone, model?: number): boolean?
